@@ -1,20 +1,20 @@
-export default function Page() {
-  const kainos = [
-    { medziaga: "Balta", kaina: 10.5 },
-    { medziaga: "Pilka", kaina: 12.3 },
-    { medziaga: "Ąžuolas", kaina: 25.0 }
-  ];
+Noriu sukurti skaičiuoklę, skirtą apskaičiuoti virtuvės arba spintos baldų kainą pagal pasirinktus komponentus.
+Skaičiavime turi būti įtraukti šie duomenys:
+– Plokštės kvadratinė kaina (pvz. Velvet, Senosan, Valchromat)
+– Stalviršio kvadratinė kaina (pvz. HPL, akmuo)
+– Stalčių bėgelių kaina (pagal tipą)
+– Rankenėlių kaina (pagal modelį)
+– Paspaudimų mechanizmų kaina (pagal tipą)
+– Kampinių mechanizmų kaina (jei pasirenkama L forma)
+– Darbo/surinkimo kaina (fiksuota arba nuo komponentų kiekio)
 
-  return (
-    <main style={{ padding: "20px", fontFamily: "Arial" }}>
-      <h1>Baldų skaičiuoklė</h1>
-      <ul>
-        {kainos.map((e, i) => (
-          <li key={i}>
-            {e.medziaga} – {e.kaina} €/m²
-          </li>
-        ))}
-      </ul>
-    </main>
-  );
-}
+Vartotojas turi galėti pasirinkti:
+– Virtuvės formą (L, U, tiesi)
+– Plokštės tipą ir kodą
+– Stalviršio tipą
+– Kiek stalčių, durelių, bėgelių ir kitų komponentų reikia.
+
+Sistema turi suskaičiuoti galutinę kainą pagal pasirinktų komponentų kainas ir parodyti vartotojui bendrą kainą su PVM.
+
+Noriu, kad įrankį būtų galima įdėti į mano internetinę svetainę (iframe) ir jį bet kada papildyti naujais komponentais ar pakeisti kainas.
+
